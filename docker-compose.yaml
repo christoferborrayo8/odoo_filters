@@ -1,0 +1,29 @@
+version: '3'
+services:
+  web:
+    image: i_odoo_filter:16.0
+    container_name: h_odoo_filter
+    build: ./
+    env_file: .env
+    depends_on:
+      - postgres
+    ports:
+      - "${WEB_PORT}:8069"
+    volumes:
+      - odoo-filter-web-data:/var/lib/odoo
+      - ./addons:/mnt/extra-addons
+      - "/etc/localtime:/etc/localtime:ro"
+    entrypoint: "/usr/bin/odoo -c /etc/odoo/odoo.conf"
+  postgres:
+    image: i_postgres_filter:13
+    container_name: h_postgres_filter
+    env_file: .env
+    ports:
+      - "${DB_PORT}:5432"
+    volumes:
+      - odoo-filter-db-data:/var/lib/postgresql/data/pgdata
+      - "/etc/localtime:/etc/localtime:ro"
+
+volumes:
+  odoo-filter-db-data:
+  odoo-filter-web-data:
