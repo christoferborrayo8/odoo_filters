@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- GRUPOS CON ACCESO AL MODULO -->
+        <record id="group_administrador" model="res.groups">
+            <field name="name">Administrador</field>
+        </record>
+        <record id="group_empleado" model="res.groups">
+            <field name="name">Empleado</field>
+        </record>
+        <record id="group_visitante" model="res.groups">
+            <field name="name">Visitante</field>
+        </record>
+    </data>
+</odoo>

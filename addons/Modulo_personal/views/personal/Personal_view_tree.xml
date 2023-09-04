@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="personal_view_tree" model="ir.ui.view">
+            <field name="name">personal.view.tree</field>
+            <field name="model">personal</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="categoria"/>
+                    <field name="codigo"/>
+                    <field name="nombre"/>
+                    <field name="edad"/>
+                </tree>
+            </field>
+        </record> 
+    </data>
+</odoo>

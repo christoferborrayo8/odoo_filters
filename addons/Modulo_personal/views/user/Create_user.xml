@@ -1,0 +1,17 @@
+<odoo>
+    <record model="ir.ui.view" id="view_res_users_access_token">
+        <field name="name">res.users.add.access.token</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_form"/>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+        <xpath expr="//notebook" position="inside">
+            <page string="Categoria">
+               <group col="4">
+                  <field name="categoria"/>
+                </group>
+             </page>
+        </xpath>
+        </field>
+    </record>
+</odoo>

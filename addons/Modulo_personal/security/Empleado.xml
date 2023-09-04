@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Permiso para el modelo categoria-->
+        <record model="ir.model.access" id="access_empleado_categoria">
+            <field name="name">Access empleado categoria</field>
+            <field name="model_id" ref="model_categoria"/>
+            <field name="group_id" ref="group_empleado"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+        <!-- Permiso para el modelo personal-->
+        <record model="ir.model.access" id="access_empleado_personal">
+            <field name="name">Access empleado personal</field>
+            <field name="model_id" ref="model_personal"/>
+            <field name="group_id" ref="group_empleado"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Menu para el personal -->
+        <record id="action_gestor_ver_sin_filtros" model="ir.actions.act_window">
+            <field name="name">Vista de personal sin filtros</field>
+            <field name="res_model">personal</field>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="personal_view_tree"/>      
+        </record>
+
+        <!-- Barra para el personal -->
+        <menuitem   id="menu_personal" 
+                    name="Personal" 
+                    parent="menu_principal">
+        <menuitem   id="menu_personal_ver_sin_filtros" 
+                    name="Vista sin filtros" 
+                    parent="menu_personal" 
+                    action="action_gestor_ver_sin_filtros"/>
+    </data>
+</odoo>
