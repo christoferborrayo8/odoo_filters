@@ -7,17 +7,17 @@
     'author': 'Christofer Borrayo',
     'data': [
         'data/categoria.csv',
-        'data/personal.csv'
+        'data/personal.csv',
 
-        'security/Groups.xml'
-        'security/Administrador.xml'
-        'security/Empleado.xml'
-        'security/Visitante.xml'
+        'security/Groups.xml',
+        'security/Administrador.xml',
+        'security/Empleado.xml',
+        'security/Visitante.xml',
 
-        'views/Menu_principal.xml'
+        'views/Menu_principal.xml',
 
-        'views/personal/Pesonal_view_tree.xml'
-        'views/personal/Menu.xml'
+        'views/personal/Personal_view_tree.xml',
+        'views/personal/Menu.xml',
 
         'views/user/Create_user.xml'
     ],

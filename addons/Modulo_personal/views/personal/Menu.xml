@@ -2,7 +2,7 @@
 <odoo>
     <data>
         <!-- Menu para el personal -->
-        <record id="action_gestor_ver_sin_filtros" model="ir.actions.act_window">
+        <record model="ir.actions.act_window" id="action_gestor_ver_sin_filtros">
             <field name="name">Vista de personal sin filtros</field>
             <field name="res_model">personal</field>
             <field name="view_mode">tree</field>
@@ -12,7 +12,7 @@
         <!-- Barra para el personal -->
         <menuitem   id="menu_personal" 
                     name="Personal" 
-                    parent="menu_principal">
+                    parent="menu_principal"/>
         <menuitem   id="menu_personal_ver_sin_filtros" 
                     name="Vista sin filtros" 
                     parent="menu_personal" 
