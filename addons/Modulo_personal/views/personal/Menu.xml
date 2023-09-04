@@ -8,6 +8,21 @@
             <field name="view_mode">tree</field>
             <field name="view_id" ref="personal_view_tree"/>      
         </record>
+        <!-- Menu para el personal (con dominio) -->
+        <record model="ir.actions.act_window" id="action_gestor_ver_con_dominio">
+            <field name="name">Vista de personal (Con dominio)</field>
+            <field name="res_model">personal</field>
+            <field name="view_mode">tree</field>
+            <field name="domain">['|',('edad','>','35'),('edad','=','27')]</field>
+            <field name="view_id" ref="personal_view_tree"/>      
+        </record>
+        <!-- Menu para el personal (con actions) -->
+        <record model="ir.actions.server" id="action_gestor_ver_actions">
+            <field name="name">Vista de personal (Con actions)</field>
+            <field name="model_id" ref="model_personal"/>
+            <field name="state">code</field>
+            <field name="code">action = model.filtro_ver_el_personal()</field>
+        </record>
 
         <!-- Barra para el personal -->
         <menuitem   id="menu_personal" 
@@ -17,5 +32,13 @@
                     name="Vista sin filtros" 
                     parent="menu_personal" 
                     action="action_gestor_ver_sin_filtros"/>
+        <menuitem   id="menu_personal_ver_con_dominio" 
+                    name="Vista con dominio" 
+                    parent="menu_personal" 
+                    action="action_gestor_ver_con_dominio"/>
+        <menuitem   id="menu_personal_ver_con_actions" 
+                    name="Vista con actions" 
+                    parent="menu_personal" 
+                    action="action_gestor_ver_actions"/>
     </data>
 </odoo>
